@@ -12,12 +12,11 @@ export const task1 = () => {
     if (!COND1) {
       return null
     }
-    const sheepArray = []
+    let sheepString = ''
     for (let i = 1; i <= inputValue; i++) {
-      const singleSheep = `${i}sheep...`
-      sheepArray.push(singleSheep)
+      const singleSheep = `${i} sheep...`
+      sheepString += singleSheep
     }
-    const sheepString = sheepArray.join('')
     const paragraph = document.querySelector('#task1').appendChild(document.createElement('p'))
     paragraph.innerText = sheepString
   })

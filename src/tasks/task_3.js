@@ -7,7 +7,7 @@ export const task3 = () => {
     return null
   }
   button.addEventListener('click', () => {
-    const wordsArray = input.value.split(' ')
+    const wordsArray = input.value.replace(/[^\w\s]|_/g, '').split(' ')
     let shortesWord = wordsArray[0].length
     wordsArray.forEach(element => {
       if (element.length < shortesWord) {
