@@ -6,7 +6,12 @@ export const task1 = () => {
     return null
   }
   button.addEventListener('click', () => {
-    const inputValue = input.value
+    const inputValue = +input.value
+    const isNumber = (item) => !isNaN(parseFloat(item))
+    const COND1 = isNumber(inputValue)
+    if (!COND1) {
+      return null
+    }
     const sheepArray = []
     for (let i = 1; i <= inputValue; i++) {
       const singleSheep = `${i}sheep...`

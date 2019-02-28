@@ -13,7 +13,7 @@ export const task2 = () => {
     if (COND1 && COND2 && COND3) {
       for (let i = 0; i < inputValue; i++) {
         const block = document.querySelector('[data-js-box]').appendChild(document.createElement('div'))
-        block.style.background = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`
+        block.style.cssText = `width: ${inputValue}px; height: ${inputValue}px; background: rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`
       }
     } else {
       alert('Data error')
