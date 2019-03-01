@@ -2,7 +2,6 @@ export const task2 = () => {
   const task2 = document.querySelector('#task2')
   const input = document.querySelector('[data-js-task2]')
   const button = document.querySelector('[data-js-btn-2]')
-  const boxStyles = ``
   if (task2 == null) {
     return null
   }
