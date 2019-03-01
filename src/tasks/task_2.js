@@ -7,17 +7,20 @@ export const task2 = () => {
   }
   button.addEventListener('click', () => {
     const inputValue = +input.value
+    const block = document.querySelector('[data-js-box]')
+    while (block.lastChild) {
+      block.removeChild(block.lastChild)
+    }
     const COND1 = (typeof inputValue === 'number')
     const COND2 = (inputValue <= 30)
     const COND3 = (inputValue > 0)
     if (COND1 && COND2 && COND3) {
       for (let i = 0; i < inputValue; i++) {
-        const block = document.querySelector('[data-js-box]')
         const row = block.appendChild(document.createElement('div'))
         row.style.cssText = 'width: 100%; margin-bottom: 15px; display: flex;'
         for (let j = 0; j < inputValue; j++) {
-          const block = row.appendChild(document.createElement('div'))
-          block.style.cssText = `width: 200px; height: 50px; margin: 0 15px; background: rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`
+          const singleBlock = row.appendChild(document.createElement('div'))
+          singleBlock.style.cssText = `width: 200px; height: 50px; margin: 0 15px; background: rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)`
         }
       }
     } else {
